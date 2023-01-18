@@ -1,0 +1,5 @@
+@import "../../../../styles/tasks";
+
+.roundCheckbox {
+  @include defaultCheckbox;
+}

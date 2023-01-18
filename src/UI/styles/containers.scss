@@ -1,0 +1,19 @@
+@import "colors";
+@import "constants";
+
+
+@mixin defaultContainer {
+  border-radius: $default-border-radius;
+  padding: $small-padding;
+
+}
+
+@mixin darkContainer {
+  @include defaultContainer;
+  background-color: $surface-regular-color;
+}
+
+@mixin lightContainer {
+  @include defaultContainer;
+  background-color: $surface-light-color;
+}

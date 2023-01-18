@@ -1,0 +1,10 @@
+@import "src/UI/styles/colors";
+@import "src/UI/styles/typography";
+@import "src/UI/styles/buttons";
+@import "src/UI/styles/containers";
+@import "src/UI/styles/constants";
+@import "src/UI/styles/tasks";
+
+.lightContainer {
+  @include lightContainer;
+}

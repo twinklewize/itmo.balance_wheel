@@ -1,0 +1,48 @@
+@import "src/UI/styles/colors";
+@import "src/UI/styles/tasks";
+
+.task {
+  @include task;
+
+  .icon {
+    color: $icons-60-color;
+    min-width: 24px;
+    min-height: 24px;
+  }
+}
+
+.completedTask {
+  @extend .task;
+  @include completedTask;
+
+  .icon {
+    color: $icons-40-color;
+  }
+}
+
+.mainTask {
+  @extend .task;
+  cursor: default;
+  width: 100%;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  input {
+    width: 100%;
+    padding: 0;
+    @include heading2;
+    border: 0;
+    outline: none;
+  }
+}
+
+.completedMainTask {
+  @extend .mainTask;
+  @include completedTask;
+
+  .icon {
+    color: $icons-40-color;
+  }
+}

@@ -1,0 +1,53 @@
+@import "../../../../../styles/colors";
+@import "../../../../../styles/constants";
+@import "../../../../../styles/containers";
+@import "../../../../../styles/buttons";
+@import "../../../../../styles/typography";
+
+.bottomCalendar{
+  margin: 0;
+  border: 0;
+
+  background-color: $background-color;
+  position: fixed;
+  height: $bottom-bar-size;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  padding-left: $default-padding;
+  color: $text-60-color;
+  width: 100vw;
+  display: flex;
+
+  flex-direction: row;
+  align-items: center;
+
+  padding-bottom: $default-padding/2;
+
+  .icon {
+    color: $icons-40-color;
+    min-width: 24px;
+  }
+}
+
+.calendarWithDate{
+  @include defaultButton;
+  @include body-regular;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: transparent;
+
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  color: $icons-60-color;
+
+  .icon {
+    color: $icons-60-color;
+    min-width: 24px;
+  }
+
+}

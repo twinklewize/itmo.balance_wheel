@@ -1,0 +1,107 @@
+@import "src/UI/styles/colors";
+@import "src/UI/styles/typography";
+@import "src/UI/styles/constants";
+@import "../../buttons/Button/Button.module";
+
+@media screen and (min-width: 500px) {
+  .empty{
+    width: $date-size;
+    height: $date-size;
+    border-radius: $date-size/2;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .empty{
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
+  }
+}
+
+
+@mixin defaultDay{
+  @extend .empty;
+  @include heading4;
+  color: $text-40-color;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.dayOfWeek{
+  @include body-small;
+  text-align: center;
+}
+
+.day {
+  @include defaultDay;
+
+  &:hover {
+    background-color: $surface-regular-color;
+  }
+}
+
+.today{
+  @include defaultDay;
+  color: $text-60-color;
+  background-color: $surface-dark-color;
+}
+
+.selectedDay{
+  @include defaultDay;
+  color: $text-color;
+  background-color: $primary-color;
+}
+
+.anotherMonth{
+  @extend .day;
+  color: $text-20-color;
+}
+
+
+.chevron{
+  @include defaultButton;
+}
+
+@mixin alignment{
+  display: grid;
+  grid-template-columns: repeat(7, minmax(36px, max-content));
+  grid-row-gap: 1vh;
+  justify-content: space-between;
+}
+
+
+.header{
+  @include heading4;
+  display: flex;
+  justify-content: space-between;
+
+  .chevrons{
+    align-items: center;
+    display: flex;
+    gap: 16px;
+  }
+}
+
+.daysOfWeek{
+  @include alignment;
+  height: 20px;
+  margin-top: $default-padding;
+  margin-bottom: $default-padding/2;
+}
+
+.body{
+  @include alignment;
+}
+
+.frame{
+  width: 100%;
+  max-height: 1000px;
+  transition: 300ms;
+  *:hover {
+    clip: rect(auto, auto, 10rem, auto);
+  }
+}

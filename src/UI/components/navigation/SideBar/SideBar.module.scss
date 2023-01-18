@@ -1,0 +1,128 @@
+@import "src/UI/styles/colors";
+@import "src/UI/styles/constants";
+@import "src/UI/styles/typography";
+@import "src/UI/styles/buttons";
+
+.background{
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  top: 0;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  transition: all 350ms;
+  opacity: 0;
+}
+
+.backgroundActive {
+  @extend .background;
+  opacity: 1;
+}
+
+.header{
+  padding-left: $default-padding;
+  padding-right: $default-padding;
+  background-color: $primary-color;
+  height: $appBar-height * 2;
+  display: flex;
+  align-items: end;
+}
+
+.headerContent {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .name{
+    @include body-large;
+  }
+}
+
+
+.sidebar {
+  z-index: 2;
+  background-color: $surface-regular-color;
+  width: $sidebar-width;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  transition: 250ms;
+}
+
+.sidebarContent{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sideBarItems {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0;
+}
+
+.defaultListElement{
+  @include body-regular;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  height: 40px;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+
+  .icon{
+    color: $icons-60-color;
+  }
+
+  p{
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.listElementWithPadding{
+  @include defaultButton;
+  @extend .defaultListElement;
+  justify-content: start;
+  margin: 0 0 0 $default-padding;
+}
+
+.nameAndAvatar{
+  @include defaultButton;
+  color: $text-color;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+.subListElement{
+  @include defaultButton;
+  @extend .defaultListElement;
+  width: 100%;
+  margin-top: 4px;
+  padding-left: $default-padding * 2;
+  justify-content: start;
+  color: $text-60-color;
+  .icon{
+    color: $icons-40-color;
+  }
+}
+
+.bottomButton{
+  height: $bottom-bar-size;
+  color: $text-60-color;
+}
+

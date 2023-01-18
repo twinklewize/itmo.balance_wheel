@@ -1,0 +1,123 @@
+@import "../../../styles/colors";
+@import "../../../styles/constants";
+@import "../../../styles/containers";
+@import "../../../styles/buttons";
+
+.container {
+  @include darkContainer;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+
+  h4 {
+    margin: 0 0 16px;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .content {
+    justify-content: space-between;
+
+
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+}
+
+@media screen and (max-width: 640px) {
+  .content {
+
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(48px, max-content));
+    row-gap: 16px;
+  }
+
+}
+
+
+.icon {
+  @include defaultButton;
+  width: 44px;
+  height: 44px;
+  background-color: $surface-dark-color;
+  border-radius: 22px;
+  border: 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.activeIcon {
+
+  @extend .icon;
+  background-color: $primary-color;
+  color: $text-color;
+  &:hover{
+  opacity: 1;
+}
+}
+
+.color {
+  @include defaultButton;
+  width: 44px;
+  height: 44px;
+  border-radius: 22px;
+  border: 0;
+}
+
+.colorActive {
+  @extend .color;
+  opacity: 0.8;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.colorCheckIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.dayChoosing {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.day {
+  @include defaultButton;
+  color: $text-60-color;
+  background-color: $surface-dark-color;
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  min-height: 32px;
+  border: 0;
+
+  align-items: center;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+
+
+  h4 {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.activeDay {
+  @extend .day;
+  background-color: $primary-color;
+  color: $text-color;
+}

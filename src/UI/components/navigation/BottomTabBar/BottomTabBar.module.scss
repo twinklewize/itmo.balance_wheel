@@ -1,0 +1,41 @@
+@import "src/UI/styles/colors";
+@import "src/UI/styles/constants";
+
+.tabBar {
+  background-color: $background-color;
+  position: fixed;
+  height: $bottom-bar-size;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  flex-direction: column;
+
+}
+
+.icons {
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  bottom: $default-padding;
+}
+
+.icon {
+  padding: 8px;
+  color: $icons-40-color;
+
+  &:hover {
+    color: $icons-20-color;
+  }
+}
+
+.iconActive {
+  @extend .icon;
+  color: $icons-color;
+
+  &:hover {
+    color: $icons-60-color;
+  }
+}
+

@@ -1,0 +1,75 @@
+@import "../../../../styles/colors";
+@import "../../../../styles/buttons";
+@import "../../../../styles/constants";
+@import "../../../../styles/typography";
+@import "../../../../styles/containers";
+
+.tabBar{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+
+
+  overflow: hidden;
+
+     .tabIndicator {
+
+       margin-top: 4px;
+      position: relative;
+      height: 4px;
+      background: $primary-color;
+      left: 0;
+      border-radius: 2px;
+      transition: all 500ms ease-in-out;
+    }
+
+
+  & .tabBody{
+    margin-top: 16px;
+    & > div{
+      opacity: 0;
+      transform: scale(0.9);
+      transition: none;
+      height: 0;
+
+      &.active{
+        opacity: 1;
+        transform: scale(1);
+        height: inherit;
+        transition: opacity 500ms ease-out 0ms, transform 500ms ease-in-out 0ms;
+
+      }
+    }
+  }
+
+  & .tabHeader {
+    @include body-small;
+    height: 20px;
+    align-items: center;
+    justify-items: start;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+
+
+    & > div {
+      text-align: start;
+      cursor: pointer;
+
+      &.active{
+        @include heading5;
+      }
+    }
+  }
+}
+
+.tabContainer{
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+  p{
+    @include body-regular;
+  }
+}

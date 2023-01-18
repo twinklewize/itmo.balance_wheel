@@ -1,0 +1,159 @@
+@import "src/UI/styles/colors";
+@import "src/UI/styles/typography";
+@import "src/UI/styles/constants";
+@import "src/UI/styles/containers";
+@import "src/UI/styles/buttons";
+
+.chartWithContainers{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: -$default-padding/2;
+
+}
+
+
+  .chartBloc {
+    width: 100%;
+    max-width: 424px;
+    aspect-ratio: 1;
+    display: flex;
+    margin-bottom: $default-padding/2;
+    .chartPieChunk {
+      .sectorWithShadow {
+        filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.1)) drop-shadow(2px -1px 6px rgba(0, 0, 0, 0.1));
+
+        .sector {
+          transition: transform .5s;
+          transform-origin: center center;
+        }
+      }
+    }
+  }
+
+
+.containersBloc {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  .container{
+
+    @include darkContainer;
+    flex-direction: column;
+
+    .title{
+      @include body-regular;
+    }
+
+    .hint{
+      @include body-small;
+      color: $text-40-color;
+      margin-bottom: 4px;
+    }
+
+    .slider{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+
+
+
+      .rangeInput {
+        margin: 2px 0 0;
+        width: 100%;
+        height: 6px;
+        border-radius: 5px;
+        outline: none;
+        opacity: 0.7;
+        -webkit-appearance: none;
+        -webkit-transition: .2s;
+        transition: opacity .2s;
+
+        &:hover{
+          opacity: 1;
+        }
+
+        &::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          appearance: none;
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          background: $secondary-color;
+          cursor: pointer;
+        }
+
+        &::-moz-range-thumb {
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          background: $secondary-color;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.score{
+  @include body-small;
+  color: $text-40-color;
+  width: 40px;
+  text-align: end;
+  margin-left: 16px;
+}
+
+.progressBar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .progress {
+    width: 100%;
+    background-color:  $surface-dark-color;
+    border-radius: 4px;
+    position: relative;
+    height: 6px;
+
+    .progressDone {
+      background: $secondary-color;
+      border-radius: 4px;
+      height: 100%;
+      width: 0;
+      opacity: 0;
+      transition:  ease 1s;
+    }
+  }
+
+  .score{
+    @include body-small;
+    width: auto;
+    color: $text-40-color;
+    text-align: end;
+    margin-left: 16px;
+  }
+}
+
+.button{
+  @include defaultButton;
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: $icons-40-color;
+}
+
+.containerHeader{
+  height: 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-between;
+}
+
+

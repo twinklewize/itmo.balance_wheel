@@ -1,0 +1,107 @@
+$font-family: 'Roboto', sans-serif;
+
+@mixin font-defaults {
+  font-family: $font-family;
+}
+
+// headings
+@mixin heading1 {
+  @include font-defaults;
+
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+
+}
+
+@mixin heading2 {
+  @include font-defaults;
+
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+@mixin heading3 {
+  @include font-defaults;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+@mixin heading4 {
+  @include font-defaults;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+@mixin heading5 {
+  @include font-defaults;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+// body
+@mixin body-large {
+  @include font-defaults;
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+@mixin body-regular {
+  @include font-defaults;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+@mixin body-small {
+  @include font-defaults;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+@mixin noPaddings {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  @include heading1;
+  @include noPaddings;
+}
+
+h2 {
+  @include heading2;
+  @include noPaddings;
+}
+
+h3 {
+  @include heading3;
+  @include noPaddings;
+}
+
+h4 {
+  @include heading4;
+  @include noPaddings;
+}
+
+h5 {
+  @include heading5;
+  @include noPaddings;
+}
+
+body {
+  @include body-regular;
+  @include noPaddings;
+}

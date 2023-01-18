@@ -1,0 +1,50 @@
+@import 'src/UI/styles/containers';
+@import 'src/UI/styles/colors';
+@import 'src/UI/styles/typography';
+@import "src/UI/styles/buttons";
+
+.container{
+  width: 100%;
+  @include defaultButton;
+  @include darkContainer;
+  flex-direction: column;
+  border: 0;
+  justify-content: start;
+  justify-items: start;
+  align-content: start;
+  align-items: start;
+  margin: 0;
+}
+
+.title{
+  @include body-regular;
+  display: flex;
+  margin: 0;
+}
+
+.hint{
+  @include body-regular;
+  color: $text-40-color;
+  display: flex;
+  margin-top: 16px;
+  margin-bottom: 0;
+}
+
+.avatarContainer{
+  @extend .container;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoutContainer {
+  @extend .container;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: $text-60-color;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+}

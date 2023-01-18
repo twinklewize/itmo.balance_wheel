@@ -1,0 +1,33 @@
+@import "src/UI/styles/colors";
+@import "src/UI/styles/typography";
+@import "src/UI/styles/constants";
+
+@mixin defaultAppBar {
+  height: $appBar-height;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+
+  padding-left: $default-padding;
+  padding-right: $default-padding;
+  transition: ease-in-out 0.3s;
+
+  position: fixed;
+
+  right: 0;
+  top: 0;
+  left: 0;
+}
+
+.primaryAppBar {
+  @include defaultAppBar;
+  background-color: $primary-color;
+}
+
+.transparentAppBar {
+  @include defaultAppBar;
+  background-color: $background-color;
+  border-bottom: 1px solid $surface-darkest-color;
+}

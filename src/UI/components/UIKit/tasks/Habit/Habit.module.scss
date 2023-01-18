@@ -1,0 +1,18 @@
+@import "src/UI/styles/colors";
+@import "src/UI/styles/tasks";
+
+.habit {
+  @include task;
+  background: $surface-light-color;
+
+  .habitIcon {
+    min-width: 24px;
+    min-height: 24px;
+    border-radius: 12px;
+  }
+}
+
+.completedHabit {
+  @extend .habit;
+  @include completedTask;
+}

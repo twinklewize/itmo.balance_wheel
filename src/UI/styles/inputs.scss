@@ -1,0 +1,33 @@
+@import "src/UI/styles/constants";
+@import "src/UI/styles/colors";
+@import "src/UI/styles/typography";
+
+@mixin defaultInput {
+  width: 100%;
+  height: $input-default-height;
+  background-color: $background-color;
+  border-radius: $input-border-radius;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid $surface-darkest-color;
+
+  & input {
+    @include body-regular;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: hidden;
+    outline: none;
+    padding-right: 16px;
+    padding-left: 16px;
+
+    &::placeholder {
+      color: $text-40-color;
+    }
+  }
+
+  & span {
+    cursor: pointer;
+  }
+}

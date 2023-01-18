@@ -1,0 +1,12 @@
+@mixin defaultButton {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+
+  cursor: pointer;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+

@@ -1,0 +1,66 @@
+@import "src/UI/styles/constants";
+@import "src/UI/styles/colors";
+@import "src/UI/styles/buttons";
+@import "src/UI/styles/typography";
+
+@mixin task {
+  @include body-regular;
+  border-radius: $default-border-radius;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 16px;
+  gap: 16px;
+  height: 40px;
+  margin: 0;
+
+  cursor: pointer;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+
+@mixin completedTask {
+  p {
+    color: $text-60-color;
+  }
+}
+
+@mixin defaultCheckbox {
+  @include defaultButton;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+@mixin lightContainer {
+  width: 100%;
+  background: $surface-light-color;
+  border-radius: $default-border-radius;
+
+  .task {
+    background: $surface-light-color;
+  }
+
+  .completedTask {
+    background: $surface-light-color;
+  }
+}
+
+@mixin darkContainer {
+  width: 100%;
+  background: $surface-regular-color;
+  border-radius: $default-border-radius;
+
+  .task {
+    background: $surface-regular-color;
+  }
+
+  .completedTask {
+    background: $surface-regular-color;
+  }
+}

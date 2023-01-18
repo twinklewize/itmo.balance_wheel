@@ -1,0 +1,79 @@
+@import "../../../styles/colors";
+@import "../../../styles/constants";
+@import "../../../styles/typography";
+@import "../../../styles/buttons";
+
+.taskInput {
+  @include body-regular;
+  display: grid;
+  height: 64px;
+  padding: 0;
+  margin: 0;
+
+  border: 0;
+  background-color: transparent;
+
+  resize: none;
+  outline: none;
+
+  &::placeholder {
+    color: $text-40-color;
+  }
+}
+
+.icons {
+  margin-top: $default-padding/2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container {
+  flex-direction: column;
+  box-sizing: border-box;
+  display: flex;
+  margin: $default-padding $default-padding $default-padding / 2;
+}
+
+.icon {
+  color: $icons-40-color;
+  min-width: 24px;
+}
+
+.controls {
+  display: flex;
+  flex-direction: row;
+  height: 48px;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  margin-right: 16px;
+}
+
+.calendarWithDate {
+  @include defaultButton;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  color: $icons-60-color;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: transparent;
+  @include body-regular;
+
+  .icon {
+    color: $icons-60-color;
+    min-width: 24px;
+  }
+}
+
+.sendIconInactive {
+  color: $icons-60-color;
+}

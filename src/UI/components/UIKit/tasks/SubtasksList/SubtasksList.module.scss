@@ -1,0 +1,25 @@
+@import "src/UI/styles/colors";
+@import "src/UI/styles/typography";
+@import "src/UI/styles/buttons";
+@import "src/UI/styles/containers";
+@import "src/UI/styles/constants";
+@import "src/UI/styles/tasks";
+
+.lightContainer {
+  @include lightContainer;
+}
+
+.addSubtaskButton {
+  @include defaultButton;
+  @include body-regular;
+  background: $surface-dark-color;
+  border: 0;
+  border-radius: $default-border-radius;
+  padding: 8px 16px;
+  height: 40px;
+  gap: 16px;
+
+  width: 100%;
+  align-items: center;
+  justify-content: start;
+}

@@ -1,0 +1,40 @@
+@import "src/UI/styles/colors";
+@import "src/UI/styles/buttons";
+@import "src/UI/styles/tasks";
+
+.sphereCheckingContainer {
+  @include darkContainer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  justify-content: space-between;
+
+  .sphereCheckingCheckboxWithTitle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+
+    p {
+      padding: 0;
+      margin: 0;
+    }
+
+    .icon {
+      color: $icons-40-color;
+    }
+
+    .checkedIcon {
+      color: $icons-60-color;
+    }
+  }
+}
+
+.editIcon {
+  @include defaultButton;
+  color: $icons-40-color;
+}

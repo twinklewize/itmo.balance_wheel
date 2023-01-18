@@ -1,0 +1,11 @@
+@import "src/UI/styles/inputs";
+@import "src/UI/styles/colors";
+
+.darkInput{
+  @include defaultInput;
+}
+
+.lightInput {
+  @include defaultInput;
+  border: 1px solid $surface-dark-color;
+}

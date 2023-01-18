@@ -1,0 +1,18 @@
+@import "../../../../../styles/colors";
+@import "../../../../../styles/buttons";
+@import "../../../../../styles/constants";
+@import "../../../../../styles/typography";
+
+.badges{
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(100vw - 2 * #{$default-padding});
+  max-width: 800px;
+
+  gap: 16px;
+  left: $default-padding;
+  right: $default-padding;
+
+
+  min-height: 24px;
+}

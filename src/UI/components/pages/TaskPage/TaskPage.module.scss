@@ -1,0 +1,28 @@
+@import "src/UI/styles/colors";
+@import "src/UI/styles/typography";
+@import "src/UI/styles/constants";
+@import "src/UI/styles/containers";
+
+.note{
+  @include body-regular;
+  width: 100%;
+  min-height: 64px;
+  border: 0;
+  resize: none;
+  overflow: hidden;
+  outline: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 8px 12px;
+  border-radius: 8px;
+
+
+
+  background-color: $surface-regular-color;
+  width: 100%;
+
+  &::placeholder{
+    color: $text-40-color;
+  }
+}

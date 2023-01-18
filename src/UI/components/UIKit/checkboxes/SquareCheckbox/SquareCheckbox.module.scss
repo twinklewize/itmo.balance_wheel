@@ -1,0 +1,12 @@
+@import "../../../../styles/tasks";
+@import "../../../../styles/colors";
+
+.checkbox {
+  @include defaultCheckbox;
+  color: $icons-60-color;
+}
+
+.checkboxActive {
+  @extend .checkbox;
+  color: $icons-40-color;
+}

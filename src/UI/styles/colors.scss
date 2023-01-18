@@ -1,0 +1,55 @@
+// primary
+$primary-color: #E4E33D;
+$secondary-color: #000000;
+$background-color: #FFFFFF;
+
+// functional
+$success-color: #3DE49E;
+$error-color: #E43D3D;
+
+// surface
+$surface-darkest-color: #B8B5B5;
+$surface-dark-color: #E9E9E9;
+$surface-regular-color: #F7F7F7;
+$surface-light-color: #FCFCFC;
+
+// text
+$text-color: rgba(0, 0, 0, 1);
+$text-80-color: rgba(0, 0, 0, 0.8);
+$text-60-color: rgba(0, 0, 0, 0.6);
+$text-40-color: rgba(0, 0, 0, 0.4);
+$text-20-color: rgba(0, 0, 0, 0.2);
+
+// icons
+$icons-color: #000000;
+$icons-60-color: #666666;
+$icons-40-color: #999999;
+$icons-20-color: #CCCCCC;
+
+:root {
+  --background: $background-color;
+  --font-color: $text-color;
+}
+
+:export {
+  primaryColor: $primary-color;
+  secondaryColor: $secondary-color;
+  backgroundColor: $background-color;
+
+  successColor: $success-color;
+  errorColor: $error-color;
+
+  surfaceDarkestColor: $surface-darkest-color;
+  surfaceDarkColor: $surface-dark-color;
+  surfaceRegularColor: $surface-regular-color;
+  surfaceLightColor: $surface-light-color;
+
+  textColor: $text-color;
+  text60Color: $text-60-color;
+  text40Color: $text-40-color;
+
+  iconsColor: $icons-color;
+  icons60Color: $icons-60-color;
+  icons40Color: $icons-40-color;
+  icons20Color: $icons-20-color;
+}

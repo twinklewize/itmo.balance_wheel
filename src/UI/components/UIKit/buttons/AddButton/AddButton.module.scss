@@ -1,0 +1,21 @@
+@import "../../../../styles/colors";
+@import "../../../../styles/buttons";
+@import "../../../../styles/constants";
+
+.addButton {
+  @include defaultButton;
+  width: 56px;
+  height: 56px;
+  border-radius: 28px;
+  background-color: $primary-color;
+  border: 0;
+
+  filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.1));
+
+  position: fixed;
+  right: $default-padding;
+  bottom: $default-padding + $bottom-bar-size;
+
+  transition: scale ease-in-out 0.3s;
+  scale: 0.5;
+}

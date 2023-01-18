@@ -1,0 +1,32 @@
+@import "src/UI/styles/colors";
+@import "src/UI/styles/buttons";
+
+.title {
+  width: 100%;
+  margin: 0;
+}
+
+.accordionButton {
+  @include defaultButton;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: 0;
+  background-color: transparent;
+  padding: 0;
+}
+
+.chevron{
+  margin-left: auto;
+  transition: transform 0.2s ease-in-out;
+  color: $icons-60-color;
+
+  .active &{
+    transform: rotate(-180deg);
+  }
+}
+
+.container {
+  transition: height 0.2s ease-in-out;
+  overflow: hidden;
+}

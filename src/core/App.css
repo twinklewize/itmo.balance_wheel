@@ -1,0 +1,8 @@
+@import "../UI/styles/reset.scss";
+@import "../UI/styles/colors.scss";
+@import "../UI/components/UIKit/buttons/Button/Button.module.scss";
+@import "../UI/styles/typography.scss";
+
+.App {
+  text-align: center;
+}

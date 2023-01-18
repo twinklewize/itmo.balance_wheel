@@ -1,0 +1,18 @@
+@import "src/UI/styles/colors";
+@import "src/UI/styles/buttons";
+@import "src/UI/styles/constants";
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: $text-80-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.name{
+  text-align: center;
+  color: $primary-color;
+}

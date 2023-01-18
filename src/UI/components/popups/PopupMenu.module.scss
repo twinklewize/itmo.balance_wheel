@@ -1,0 +1,109 @@
+@import "src/UI/styles/colors";
+@import "src/UI/styles/constants";
+@import "src/UI/styles/buttons";
+
+@mixin defaultPopup {
+  z-index: 5;
+  background: $background-color;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 12px rgba(0.2, 0, 0, 0.2);
+  min-width: 160px;
+  transform: translateY(-40px);
+  transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s, scale 0.3s ease;
+  border-radius: 8px;
+  opacity: 0;
+  visibility: hidden;
+  scale: 0.5;
+}
+
+.settingsPopupStyle {
+  @include defaultPopup;
+  position: absolute;
+  top: $appBar-height - 4px;
+  right: $default-padding + 8px;
+}
+
+.taskDetailsListsPopupStyle {
+  @include defaultPopup;
+  position: absolute;
+  top: $appBar-height - 4px;
+  margin-left: -16px;
+}
+
+.createTaskProjectsPopupStyle {
+  @include defaultPopup;
+  position: fixed;
+  margin-top: 8px;
+  margin-left: -16px;
+}
+
+.createTaskSpheresPopupStyle {
+  @include defaultPopup;
+  position: fixed;
+  margin-top: 8px;
+  margin-left: -64px;
+}
+
+.taskDetailsSpheresPopupStyle {
+  @include defaultPopup;
+  margin-top: 8px;
+}
+
+.button {
+  @include defaultButton;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: 0;
+}
+
+.listItem {
+  @include defaultButton;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  display: flex;
+  background-color: transparent;
+  border: 0;
+
+  gap: 16px;
+  height: 36px;
+  padding: 6px 12px;
+  margin: 0;
+  text-decoration: none;
+}
+
+.activeIcon{
+  color: $icons-60-color;
+}
+
+.activeListItem{
+  @extend .listItem;
+  .icon{
+    color: $icons-60-color;
+  }
+  .title{
+    color: $text-80-color;
+  }
+  &:hover{
+    opacity: 1;
+  }
+  border-radius: 8px;
+  background-color: $surface-regular-color;
+}
+
+.icon {
+  color: $icons-40-color;
+}
+
+.title {
+  color: $text-60-color;
+}
+
+.taskDetailsTitle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}

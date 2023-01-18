@@ -1,0 +1,41 @@
+@import "src/UI/styles/colors";
+@import "src/UI/styles/constants";
+@import "src/UI/styles/typography";
+@media screen and (max-width: 500px) {
+  .image{
+    width: $image-size;
+    max-width: 600px;
+    aspect-ratio: 1;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .image{
+    width: $image-size;
+    min-width: 280px;
+    aspect-ratio: 1;
+  }
+}
+
+
+
+.container{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.heading{
+  margin: 0;
+  color: $text-60-color;
+}
+
+.hint{
+  margin: 0;
+  @include body-small;
+  color: $text-40-color;
+
+  width: 280px;
+}

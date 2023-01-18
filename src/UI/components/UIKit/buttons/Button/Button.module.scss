@@ -1,0 +1,70 @@
+@import "../../../../styles/colors";
+@import "../../../../styles/buttons";
+@import "../../../../styles/constants";
+@import "../../../../styles/typography";
+
+.iconButton{
+  height: 24px;
+  width: 24px;
+  padding: 0;
+  margin: 0;
+  @include defaultButton;
+  border: 0;
+  background-color: transparent;
+}
+
+@mixin bigButton{
+  height: 44px;
+  padding: 16px 32px;
+  border-radius: $button-border-radius;
+}
+
+@mixin smallButton{
+  height: 32px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  color: $text-60-color;
+  @include heading4;
+}
+
+.primaryButton {
+  @include defaultButton;
+  @include bigButton;
+  @include body-regular;
+
+  background: $primary-color;
+  border: 0;
+}
+
+.outlinedButton {
+  @include defaultButton;
+  @include bigButton;
+  @include body-regular;
+  background: $background-color;
+  border: 1px solid $surface-darkest-color;
+}
+
+.secondaryButton{
+  @include defaultButton;
+  @include bigButton;
+  @include body-regular;
+
+  background: $surface-regular-color;
+  color: $text-60-color;
+  border: 0;
+}
+
+.smallPrimaryButton{
+  @extend .primaryButton;
+  @include smallButton;
+}
+
+.smallSecondaryButton{
+  @extend .secondaryButton;
+  @include smallButton;
+}
+
+.smallOutlinedButton{
+  @extend .outlinedButton;
+  @include smallButton;
+}
